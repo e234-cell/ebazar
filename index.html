@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Custom StyleSheet -->
+  <link rel="stylesheet" href="./style.css" />
+  <title>E-Bazar.pvt</title>
+  <style>
+    * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+    </style>
+</head>
+
+
+<body>
+
+  
+  <!-- HEADER -->
+
+
+ <header class="header">
+  <nav>
+    <img src="C:\Users\skins\Downloads\LOGO.png"  class="logob">
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="contactus.html">CONTACT US</a></li>
+      <li><a href="Feedback Form.html">FEEDBACK</a></li>
+      <li><a href="demo.html">DEMO PAGE</a></li>
+      <li><a href="SIgnup.html">Sign Up</a></li>
+  </ul>
+    </nav>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+      </div>
+      
+      <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      </script>
+    <!-- Intro -->
+    <div class="intro">
+     <h1>Try out the best electronics products you have ever scene</h1>
+          <h2>
+            and get up to</br>
+            <span class="dis">25% 
+              Discount</span></br>
+            during this<br />
+            Festive Season
+          </h2>
+          <h3>From 15 Dec to 05 Jan</h3>
+          <a href="#" class="btn">SHOP NOW</a>
+        </div>
+      
+  </header>
+
+  <!--Benefits  -->
+  <section class="section benefits">
+    <div class="benefit-center box">
+      <div class="benefit">
+        <span class="icon"><i class="bx bx-purchase-tag"></i></span>
+        <h4>Free Shipping</h4>
+        <span class="text">Capped at Rs 499 per order</span>
+      </div>
+
+     
+      <div class="benefit">
+        <span class="icon"><i class="bx bx-book-reader"></i></span>
+        <h4>10-Day Returns</h4>
+        <span class="text">Shop without any fear</span>
+      </div>
+
+      <div class="benefit">
+        <span class="icon"><i class="bx bx-headphone"></i></span>
+        <h4>24/7 Support</h4>
+        <span class="text">We are always there to help you</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section class="section">
+    <div class="h">
+      <h1><span>New</span> Arrivals</h1>
+    </div>
+    <div class="ac-center box">
+      <div class="ac">
+        <div class="img-cover">
+          <img src="zfold.jfif" alt="" />
+        </div>
+        <p>Samsung Galaxy Z Fold 3</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 1,09,000</div>
+      </div>
+
+      <div class="ac">
+        <div class="img-cover">
+          <img src="zflip.jfif" alt="" />
+        </div>
+        <p>Samsung Galaxy Z Flip 3</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 69,900</div>
+      </div>
+
+      <div class="ac">
+        <div class="img-cover">
+          <img src="iphone.jpg" alt="" />
+        </div>
+        <p>Apple iPhone 14</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 79900</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="mbaM2.jpg" alt="" />
+        </div>
+        <p>Apple Macbook Air M2 (2022)</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 1,28,900</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop By Category -->
+  <section class="section">
+    <div class="h">
+      <h1><span>Shop By</span> Categories</h1>
+    </div>
+    <div class="ab box">
+      <div class="item item-1">
+        <img src="mbaM2.jpg" alt="" />
+      </div>
+      <div class="item item-2">
+        <img src="fridge.jpg" alt="Refrigerator" />
+        Refrigerator
+      </div>
+      <div class="item item-3">
+        <img src="" alt="Washing Machine" />
+      </div>
+      <div class="item item-4">
+        <img src="iphone.jpg" alt="" />
+      </div>
+    </div>
+    <a href=""><h4 style="text-align:center;">Checkout all categories</h4></a>
+  </section>
+
+  <!-- Popular Products -->
+  <section class="section">
+    <div class="h">
+      <h1>Popular <span>Products</span></h1>
+    </div>
+    <div class="ac-center box">
+      <div class="ac">
+        <div class="img-cover">
+          <img src="s22ultra.jpg" alt="" />
+        </div>
+        <p>Samsung Galaxy S22 Ultra</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 1,05,900</div>
+      </div>
+
+      <div class="ac">
+        <div class="img-cover">
+          <img src="tv.webp" alt="" />
+        </div>
+        <p>LG 72 inches UHD TV</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 84,900</div>
+      </div>
+
+      <div class="ac">
+        <div class="img-cover">
+          <img src="speaker.jpg" alt="" />
+        </div>
+        <p>Marshall Acton II Wireless Bluetooth Speaker - Black</p>
+        <div class="price">Starting @ Rs 17,900</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="mbaM2.jpg" alt="" />
+        </div>
+        <p>2021 Apple MacBook Pro- Space Grey</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 1,39,000</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="s22+.webp" alt="" />
+        </div>
+        <p>Samsung Galaxy S22+</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 89,900</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="iphone.jpg" alt="" />
+        </div>
+        <p>Apple iPhone 13 Pro Max</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 1,29,000</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="fridge.jpg" alt="" />
+        </div>
+        <p>Samsung 865 Litres Refrigerator</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 2,89,000</div>
+      </div>
+      <div class="ac">
+        <div class="img-cover">
+          <img src="washingmachine.png" alt="" />
+        </div>
+        <p>LG 10.5 Kg Washing Machine</p>
+        <div class="rating">
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bxs-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+        <div class="price">Starting @ Rs 69,649</div>
+      </div>
+    </div>
+  </section>
+
+        <!-----footer-------------------->
+        <section id="footer">
+            
+            <div class="foot">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                    <li><a href="Feedback Form.html">FEEDBACK</a></li>
+                   <li><i href="C:\Users\skins\Desktop\FRONTENDPROJECT\demo.html">DEMO PAGE</i></li>
+                    
+                    
+                    
+                </ul>
+
+                <div class="social-links">
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-whatsapp"></i></a>
+                    
+                  </div>
+            </div>
+        </section>
+</body>
+</html>
